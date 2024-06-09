@@ -46,10 +46,9 @@ const Home = () => {
   return (
     <div className='h-screen w-full flex items-center justify-center'>
       <AlertDialog open={open}>
-        <div className="customAlertDialog">
           <Button variant="outline" onClick={() => setOpen(true)}>Give feedback</Button>
 
-          <AlertDialogContent>
+          <AlertDialogContent className='w-96 '>
             <div className=' h-6 w-6 border border-gray-200 rounded-sm font-bold text-2xl cursor-pointer flex items-center justify-center' onClick={() => setOpen(false)}>x</div>
 
             <AlertDialogHeader>
@@ -98,7 +97,6 @@ const Home = () => {
               </AlertDialogFooter>
             </form>
           </AlertDialogContent>
-        </div>
       </AlertDialog>
     </div>
   )
