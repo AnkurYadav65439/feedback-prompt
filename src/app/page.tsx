@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button'
 import ReactStars from 'react-rating-stars-component'
 import { FaThumbsDown, FaThumbsUp } from 'react-icons/fa'
+import { useRouter } from 'next/navigation'
 
 type FormData = {
   safety: number;
@@ -26,6 +27,8 @@ const Home = () => {
     recommend: ''
   });
 
+  const router = useRouter();
+
   console.log("formData: ", formData);          //log each time formData updated/changed
 
   const handleRatingChange = (ratingKey: string, newRating: number) => {
@@ -37,6 +40,7 @@ const Home = () => {
     // Handle form submission logic here
     console.log("submitted form: ", formData);
     setOpen(false);                            // Close the dialog after submission
+    router.push('/submitted');
   }
 
   const handleRecommendChange = (recommendation: 'up' | 'down') => {
