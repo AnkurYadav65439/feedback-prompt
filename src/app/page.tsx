@@ -39,7 +39,6 @@ const Home = () => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("submitted form: ", formData);
-    setOpen(false);                            // Close the dialog after submission
     router.push('/submitted');
   }
 
